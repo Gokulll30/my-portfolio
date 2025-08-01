@@ -1,28 +1,20 @@
-import React from 'react';
-import { HashRouter as Router } from 'react-router-dom'; // ✅ Add this
-import logo from './logo.svg';
-import './App.css';
+import Navbar from './components/Navbar';
+import About from './components/About';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
 
 function App() {
   return (
-    <Router> {/* ✅ Wrap the content with HashRouter */}
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn Reactt
-          </a>
-        </header>
-      </div>
-    </Router>
+    <div>
+      <Navbar />
+      <main className="pt-16">
+        <About />
+        <Projects />
+        <Experience />
+        <Contact />
+      </main>
+    </div>
   );
 }
 
